@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="icon" href="https://img.icons8.com/dusk/64/000000/admin-settings-male.png"/>
+</head>
+<body>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- offcanvas trigger  -->
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample">
+        <!-- thay icon và cách hiển thị offcanvas cho mobile -->
+        <span class="navbar-toggler-icon"
+          data-bs-target="#sidebar"></span>
+      </button>
+      <!-- offcanvas trigger  -->
+        <!-- tô đậm chữ + viết hoa  -->
+      <a class="navbar-brand ms-lg-0 ms-3 fw-bold text-uppercase me-auto" href="admin.html">Administrator</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <form class="d-flex ms-auto">
+            <!-- input group -->
+            <div class="input-group my-1 my-lg-0">
+                <input type="text" class="form-control" placeholder="Search something..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+              </div>
+        </form>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Admin
+                <i class="bi bi-person-circle"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+</nav>
+<!-- navbar -->
+<!-- offcanvas: bật tắt sidebar từ bên trái -->
+  <div class="offcanvas offcanvas-start sidebar-nav bg-dark text-white" tabindex="-1" id="sidebar" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body p-0">
+      <nav class="navbar-dark">
+        <ul class="navbar-nav">
+          <li>
+            <div class="text-muted small fw-bold px-3 text-uppercase">CORE</div>
+          </li>
+          <li>
+            <a href="./admin.html" class="nav-link px-3 active text-white">
+              <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <!-- chia dropdown  -->
+          <li class="my-4">
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <div class="text-muted small fw-bold px-3 text-uppercase">MENU</div>
+          </li>
+          <li>
+            <a
+              class="nav-link px-3 sidebar-link"
+              data-bs-toggle="collapse"
+              href="#layouts"
+            >
+              <span class="me-2"><i class="bi bi-shop"></i></span>
+              <span>Order Management</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-double-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="layouts">
+              <ul class="navbar-nav ps-3">
+                <li>
+                  <a href="./order-mng.html" class="nav-link px-3">
+                    <span class="me-2"
+                      ><i class="bi bi-cart-check"></i
+                    ></span>
+                    <span>Orders Status</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link px-3">
+                    <span class="me-2"
+                      ><i class="bi bi-cart4"></i
+                    ></span>
+                    <span>Orders Detail</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link px-3">
+                    <span class="me-2"
+                      ><i class="bi bi-cart-x "></i
+                    ></span>
+                    <span>Orders Canceled</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-3 text-white sidebar-link">
+              <span class="me-2"><i class="bi bi-people"></i></span>
+              <span>Account Management</span>
+            </a>
+            <!-- dropdown section  -->
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+<!-- offcanvas -->
+
+<!-- main content  -->
+    <main class="mt-5 pt-3">
+        <table id="tblDanhSach" class="table table-bordered table-success table-hover table-sm table-responsive  ms-1 mt-2">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Day Create</th>
+                    <th>Address</th>
+                    <th>Payments</th>
+                    <th>Product Number</th>
+                    <th>Payment Status</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody style="text-align: center;"> 
+                <tr>
+                <th scope="row">1</th>
+                <td>Adams</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Credit Card</td>
+                <td>5</td>
+                <td>Accepted</td>
+                <td>$399,800</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Daxua</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Debit Card</td>
+                <td>7</td>
+                <td>Accepted</td>
+                <td>$001,001</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Eva</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Cash</td>
+                <td>3</td>
+                <td>Accepted</td>
+                <td>$265,350</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Naltys</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Cash</td>
+                <td>10</td>
+                <td>Accepted</td>
+                <td>$257,300</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Clark</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Cash</td>
+                <td>8</td>
+                <td>Accepted</td>
+                <td>$137,000</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Davis</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Credit Card</td>
+                <td>11</td>
+                <td>Accepted</td>
+                <td>$265,265</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Kiara</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Cash</td>
+                <td>2</td>
+                <td>Accepted</td>
+                <td>$162,000</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Frank</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Debit Card</td>
+                <td>6</td>
+                <td>Accepted</td>
+                <td>$372,000</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Sarabi</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Cash</td>
+                <td>4</td>
+                <td>Accepted</td>
+                <td>$137,500</td>
+              </tr>
+              <tr>
+                <th scope="row">10</th>
+                <td>Hills</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Cash</td>
+                <td>12</td>
+                <td>Accepted</td>
+                <td>$327,900</td>
+              </tr>
+              <tr>
+                <th scope="row">11</th>
+                <td>Shenzi</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Credit Card</td>
+                <td>3</td>
+                <td>Accepted</td>
+                <td>$205,500</td>
+              </tr>
+              <tr>
+                <th scope="row">12</th>
+                <td>Jones</td>
+                <td>21/12/2021</td>
+                <td>123 Main Street, New York, NY 10030</td>
+                <td>Credit Card</td>
+                <td>8</td>
+                <td>Accepted</td>
+                <td>$103,600</td>
+              </tr>
+            </tbody>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+</body>
+</html>
