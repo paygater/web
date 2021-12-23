@@ -1,0 +1,168 @@
+.navbar{
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav-item a.active{
+    border-bottom: 2px solid rgba(117,208,199);
+}
+    
+.nav-item a:hover:not(.active){
+    border-bottom: 2px solid rgba(117,208,199);
+}
+.navbar-brand img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+h3{
+    color: b;
+    font-weight: bold;
+    text-align: center;
+    padding: 2% 0 2% 0;
+}
+.activee{
+    margin: .25em;
+    padding-bottom: 0.10em;
+    text-align: center;
+    color: white;
+    background-color: #00c853;
+    font-size: .9em;
+    line-height: 1.4em;
+    font-weight: bold;
+}
+
+.inactive{
+    margin: .25em;
+    padding-bottom: 0.10em;
+    text-align: center;
+    color: white;
+    background-color: #01013f;
+    font-size: .9em;
+    line-height: 1.4em;
+    font-weight: bold;
+}
+
+.button-header .button{
+    margin-bottom: 2%;
+    background-color: rgba(17,17,133);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5%;
+}
+
+.button-header .button:hover{
+    background-color: blue;
+}
+
+.btn-group .button{
+    float: left;
+    color: white;
+    height: 100%;
+    padding: 5px 8px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    font-size: .9em;
+    line-height: 1.2em;
+    font-weight: bold;
+    border-radius: 5%;
+    margin-left: 20px;
+}
+
+.block .button{
+    background-color: #cc5224;
+}
+
+.block .button:hover{
+    background-color: #f46a36;
+}
+
+.delete .button{
+    background-color: #db0404;
+    
+}
+
+.delete .button:hover{
+    background-color: #f63c3c;
+}
+
+.add .button:hover{
+    background-color: #00c853;
+}
+
+.add .button{
+    background-color: #198754;
+}
+.containerr {
+    padding: 16px;
+    text-align: center;
+    color: black;
+}
+.cancelbtn .deletebtn{
+    float: left;
+    width: 50%;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 60%;
+    overflow: auto;;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+hr{
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.center{
+        text-align: center;
+        margin: 3% 0 5% 0;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+.pagination {
+        text-align: center;
+        display: inline-block;
+        margin-top: 20px;
+}
+    
+.pagination a{
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid rgba(39,45,59,1);
+        margin: 0 4px;
+}
+    
+.pagination a.active{
+        border: 1px solid rgba(117,208,199);
+}
+    
+.pagination a:hover:not(.active){
+        border: 1px solid White;
+}
+
+td img{
+    display: block;
+    max-width: 230px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+}
