@@ -1,0 +1,18 @@
+
+h3{
+    color: b;
+    font-weight: bold;
+    text-align: center;
+    padding: 2% 0 2% 0;
+}
+.button-header .button{
+    margin-bottom: 2%;
+    background-color: rgba(17,17,133);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5%;
+}
+
+.button-header .button:hover{
+    background-color: blue;
+}
