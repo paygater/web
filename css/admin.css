@@ -21,7 +21,8 @@
     transform: rotate(180deg);
 }
 /* định dạng hiển thị cho thiết bị mobile và web*/
-/* độ rộng màn hình > 992px sẽ bật sidebar-nav  */
+/* độ rộng màn hình > 992px:dành cho desktop sẽ bật sidebar-nav  */
+ /* <992px là tablet, surface, ipad, iphone,....  */
 @media (min-width: 992px){
     .offcanvas-backdrop::before{
         display: none;
