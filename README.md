@@ -1,3 +1,1 @@
- Trang chủ;
-Trang xem đơn hàng;
-Trang xem tài khoản cá nhân
+https://mysite2605.000webhostapp.com/Web1-Project/admin.html
